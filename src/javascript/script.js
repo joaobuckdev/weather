@@ -24,6 +24,8 @@ document.querySelector('#search').addEventListener('submit', async (event) =>{
             tempIcon: json.weather[0].icon,
             windSpeed: json.wind.speed,
             humidity: json.main.humidity,
+            pressure: json.main.pressure,
+            feelsLike: json.main.feels_like,
         });
     } else {
         showAlert(`Não foi possível localizar!
@@ -44,8 +46,10 @@ function showInfo(json) {
     
     document.querySelector('#temp_max').innerHTML = `${json.tempMax.toFixed(1).toString().replace('.', ',')} <sup>°C</sup>`
     document.querySelector('#temp_min').innerHTML = `${json.tempMin.toFixed(1).toString().replace('.', ',')} <sup>°C</sup>`
+    document.querySelector('#feels_like').innerHTML = `${json.feelsLike.toFixed(1).toString().replace('.', ',')} <sup>°C</sup>`
     document.querySelector('#wind').innerHTML = `${json.windSpeed.toFixed(1)} km/h`
     document.querySelector('#humidity').innerHTML = `${json.humidity}%`
+    document.querySelector('#pressure').innerHTML = `${json.pressure} hPa`
 }
 
 function showAlert(msg) {

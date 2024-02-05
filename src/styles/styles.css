@@ -127,12 +127,20 @@ body {
     color: #0284c7;
 }
 
+#feels_like_icon {
+    color: #252f9f;
+}
+
 #humidity_icon {
     color: #0ea5e9;
 }
 
 #wind_icon {
     color: #7c3aed;
+}
+
+#pressure_icon {
+    color: #363636;
 }
 
 #alert {
